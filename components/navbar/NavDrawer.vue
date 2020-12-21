@@ -3,7 +3,7 @@
       <div class="d-flex flex-column justify-space-between fill-height">
         <div>
           <div class="pb-2 pt-5 px-4">
-            <v-list-item-title class="text-uppercase font-weight-bold">John Doe</v-list-item-title>
+            <v-list-item-title class="text-uppercase font-weight-bold">渡部 優貴(Watanabe Yuki)</v-list-item-title>
             <v-list-item-subtitle class="grey--text text--darken-1">Web Developer</v-list-item-subtitle>
           </div>
 

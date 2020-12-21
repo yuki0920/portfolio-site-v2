@@ -24,20 +24,20 @@ export default {
     return {
       items: [
         {
-          title: 'Age',
-          text: '21',
+          title: '1990/09/20',
+          text: '生誕',
         },
         {
-          title: 'Availability',
-          text: 'Full-time',
+          title: '2013/03',
+          text: '慶應義塾大学 経済学部卒',
         },
         {
-          title: 'Work Experience',
-          text: '2 years',
+          title: '~2019/10',
+          text: '京葉ガス 経理部',
         },
         {
-          title: 'Country',
-          text: 'The Netherlands',
+          title: '~現在',
+          text: '永和システムマネジメント アジャイル事業部',
         },
       ],
     }

@@ -9,7 +9,7 @@
 
           <v-img
             style="clip-path: polygon(0 6%, 100% 0, 100% 94%, 0 100%);"
-            src="https://images.pexels.com/photos/1121796/pexels-photo-1121796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            src="profile.jpg"
             height="180"
             max-height="180"
           ></v-img>

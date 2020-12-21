@@ -16,8 +16,8 @@
           <Timeline />
         </div>
         <div class="w-100 text-center my-6">
-          <v-btn outlined color="primary darken-2" class="text-none">
-            <v-icon left>mdi-file-document-multiple</v-icon>Resume / CV
+          <v-btn outlined color="primary darken-2" class="text-none" href="https://www.wantedly.com/id/yuki0920">
+            <v-icon left>mdi-file-document-multiple</v-icon>Resume(Wantedly)
           </v-btn>
         </div>
       </div>

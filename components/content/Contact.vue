@@ -11,14 +11,6 @@
             required
             outlined
           ></v-text-field>
-          <!-- <v-text-field
-            v-model="lastname"
-            :rules="[rules.required, rules.length]"
-            :counter="10"
-            label="Last name"
-            required
-            outlined
-          ></v-text-field> -->
           <v-text-field
             v-model="email"
             :rules="[rules.required, rules.email]"
@@ -28,7 +20,13 @@
           ></v-text-field>
         </v-col>
         <v-col cols="12" sm="12" md="6" lg="6" xl="6">
-          <!-- <v-textarea outlined label="Write your message here..." required :rules="[rules.required]"></v-textarea> -->
+          <v-textarea
+            v-model="message"
+            :rules="[rules.required]"
+            label="Write your message here..."
+            required
+            outlined
+          ></v-textarea>
           <v-text-field
             v-model="botfield"
             label="人間は入力しないでください"
@@ -49,8 +47,8 @@ export default {
   data: () => ({
     valid: false,
     name: '',
-    // lastname: '',
     email: '',
+    message: '',
     botfield: '',
     rules: {
       required: (v) => !!v || '*This field is required',
@@ -62,10 +60,12 @@ export default {
   methods: {
     onSubmit() {
       const params = new FormData()
-      // NOTE: ダミーフォームと一致させる
+      // NOTE: Netlify通知用ダミーフォーム static/dummy_contact_form_for_netlify.html と一致させる
+      // NOTE: ref https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/
       params.append('form-name', 'contact')
       params.append('name', this.name)
       params.append('email', this.email)
+      params.append('message', this.message)
       params.append('bot-field', this.botfield)
 
       // # NOTE: for debug

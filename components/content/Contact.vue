@@ -4,21 +4,21 @@
       <v-row>
         <v-col cols="12" sm="12" md="6" lg="6" xl="6">
           <v-text-field
-            v-model="firstname"
+            v-model="name"
             :rules="[rules.required, rules.length]"
             :counter="10"
-            label="First name"
+            label="Name"
             required
             outlined
           ></v-text-field>
-          <v-text-field
+          <!-- <v-text-field
             v-model="lastname"
             :rules="[rules.required, rules.length]"
             :counter="10"
             label="Last name"
             required
             outlined
-          ></v-text-field>
+          ></v-text-field> -->
           <v-text-field
             v-model="email"
             :rules="[rules.required, rules.email]"
@@ -28,8 +28,13 @@
           ></v-text-field>
         </v-col>
         <v-col cols="12" sm="12" md="6" lg="6" xl="6">
-          <v-textarea outlined label="Write your message here..." required :rules="[rules.required]"></v-textarea>
-          <v-btn color="success lighten-1" class="float-right" :outlined="!valid" :disabled="!valid">
+          <!-- <v-textarea outlined label="Write your message here..." required :rules="[rules.required]"></v-textarea> -->
+          <v-text-field
+            v-model="botfield"
+            label="人間は入力しないでください"
+            v-show="false"
+          />
+          <v-btn color="success lighten-1" class="float-right" :outlined="!valid" :disabled="!valid" @click="onSubmit">
             <v-icon left small>mdi-send-outline</v-icon>Send message
           </v-btn>
         </v-col>
@@ -39,12 +44,14 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data: () => ({
     valid: false,
-    firstname: '',
-    lastname: '',
+    name: '',
+    // lastname: '',
     email: '',
+    botfield: '',
     rules: {
       required: (v) => !!v || '*This field is required',
       email: (v) => /.+@.+/.test(v) || '*E-mail must be valid',
@@ -52,5 +59,25 @@ export default {
         v.length <= 10 || '*This field must be less than 10 characters',
     },
   }),
+  methods: {
+    onSubmit() {
+      const params = new FormData()
+      // NOTE: ダミーフォームと一致させる
+      params.append('form-name', 'contact')
+      params.append('name', this.name)
+      params.append('email', this.email)
+      params.append('bot-field', this.botfield)
+
+      // # NOTE: for debug
+      console.log(...params.entries())
+
+      axios.post('/', params)
+        .then(() => {
+          console.log('Success')
+        }).catch(() => {
+          console.log('Failure')
+        })
+    }
+  }
 }
 </script>

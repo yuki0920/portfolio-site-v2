@@ -14,8 +14,8 @@
         <Services />
         <div class="d-flex justify-space-between w-100 align-center">
           <h4 class="my-6 primary--text">Skills</h4>
-          <v-btn icon @click="setExpanded" color="primary">
-            <v-icon v-if="isExpanded">mdi-chevron-down</v-icon>
+          <v-btn icon @click="setExpandedSkills" color="primary">
+            <v-icon v-if="isExpandedSkills">mdi-chevron-down</v-icon>
             <v-icon v-else>mdi-chevron-up</v-icon>
           </v-btn>
         </div>
@@ -37,7 +37,7 @@
 import { mapGetters, mapActions } from 'vuex'
 export default {
   computed: {
-    ...mapGetters('custom', ['tab', 'isExpanded', 'isExpandedServices']),
+    ...mapGetters('custom', ['tab', 'isExpandedSkills', 'isExpandedServices']),
     currentTab: {
       get: function () {
         return this.tab
@@ -45,7 +45,7 @@ export default {
     },
   },
   methods: {
-    ...mapActions('custom', ['setTab', 'setExpanded', 'setExpandedServices']),
+    ...mapActions('custom', ['setTab', 'setExpandedSkills', 'setExpandedServices']),
   },
 }
 </script>

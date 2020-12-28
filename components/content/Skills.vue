@@ -1,6 +1,6 @@
 <template>
   <v-expand-transition>
-    <div v-if="isExpanded">
+    <div v-if="isExpandedSkills">
       <v-row v-for="i in 4" :key="i" align="center">
         <v-col cols="12" sm="12" md="12" lg="12" xl="1">
           <div v-html="languages[i-1]"></div>
@@ -24,7 +24,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters('custom', ['tab', 'isExpanded']),
+    ...mapGetters('custom', ['tab', 'isExpandedSkills']),
   },
   methods: {
     rndColor() {

@@ -17,4 +17,10 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## 使用ライブラリと機能
+
+- Vuex
+  - 現在タブの表示状態管理
+  - スキル、サービスの表示状態管理
+- axios
+  - 問い合わせ内容送信(Netlify Forms も利用)

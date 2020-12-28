@@ -2,7 +2,7 @@
   <v-tabs v-model="currentTab" show-arrows :grow="$vuetify.breakpoint.mdAndDown">
     <v-tab>About me</v-tab>
     <v-tab>Portfolio</v-tab>
-    <v-tab>Hire me</v-tab>
+    <v-tab>Contact me</v-tab>
   </v-tabs>
 </template>
 

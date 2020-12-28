@@ -1,7 +1,7 @@
 <template>
   <v-form v-model="valid">
     <v-container>
-      <v-row>
+      <v-row v-if="!isSubmit">
         <v-col cols="12" sm="12" md="6" lg="6" xl="6">
           <v-text-field
             v-model="name"
@@ -23,7 +23,7 @@
           <v-textarea
             v-model="message"
             :rules="[rules.required]"
-            label="Write your message here..."
+            label="Please write your message here..."
             required
             outlined
           ></v-textarea>
@@ -35,6 +35,18 @@
           <v-btn color="success lighten-1" class="float-right" :outlined="!valid" :disabled="!valid" @click="onSubmit">
             <v-icon left small>mdi-send-outline</v-icon>Send message
           </v-btn>
+        </v-col>
+      </v-row>
+      <v-row v-else>
+        <v-col cols="12" sm="12" md="12" lg="12" xl="12">
+          <!-- NTOE: vuetifyのalertのAPIにより、閉じるボタンをクリックすると、バインドしているisSubmitがfalseに設定され、アラートが非表示になる -->
+          <v-alert
+            v-model="isSubmit"
+            type="success"
+            dismissible
+          >
+            Thank you for your inquiry. The inquiry was successfully sent.
+          </v-alert>
         </v-col>
       </v-row>
     </v-container>
@@ -56,6 +68,7 @@ export default {
       length: (v) =>
         v.length <= 10 || '*This field must be less than 10 characters',
     },
+    isSubmit: false
   }),
   methods: {
     onSubmit() {
@@ -74,6 +87,10 @@ export default {
       axios.post('/', params)
         .then(() => {
           console.log('Success')
+          this.isSubmit = true
+          this.name = ''
+          this.email = ''
+          this.message = ''
         }).catch(() => {
           console.log('Failure')
         })

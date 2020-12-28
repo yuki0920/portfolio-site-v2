@@ -1,12 +1,12 @@
   export const state = () => ({
     tab: 0,
-    isExpanded: true,
+    isExpandedSkills: true,
     isExpandedServices: true,
   });
 
   export const mutations = {
     SET_TAB: (state, param) => state.tab = param,
-    SET_EXPANDED: (state) => state.isExpanded = !state.isExpanded,
+    SET_EXPANDED_SKILLS: (state) => state.isExpandedSkills = !state.isExpandedSkills,
     SET_EXPANDED_SERVICES: (state) => state.isExpandedServices = !state.isExpandedServices,
   }
 
@@ -14,8 +14,8 @@
     tab: state => {
       return state.tab;
     },
-    isExpanded: state => {
-      return state.isExpanded;
+    isExpandedSkills: state => {
+      return state.isExpandedSkills;
     },
     isExpandedServices: state => {
       return state.isExpandedServices;
@@ -28,10 +28,10 @@
     }, param) {
       commit("SET_TAB", param)
     },
-    setExpanded({
+    setExpandedSkills({
       commit
     }) {
-      commit("SET_EXPANDED")
+      commit("SET_EXPANDED_SKILLS")
     },
     setExpandedServices({
       commit

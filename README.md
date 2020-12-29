@@ -17,10 +17,19 @@ $ npm run start
 $ npm run generate
 ```
 
-## 使用ライブラリと機能
+## 機能と使用技術
 
-- Vuex
-  - 現在タブの表示状態管理
-  - スキル、サービスの表示状態管理
-- axios
-  - 問い合わせ内容送信(Netlify Forms も利用)
+### 機能
+
+- ホスティング(Netlify)
+- 問い合わせ送信(Netlify Forms + axios)
+- 問い合わせ通知(Netlify Notification)
+- スキル、サービスの表示表示非表示切り替え(Vuex)
+- 現在タブのレイアウト変更(Vuex)
+
+### 技術
+
+- フレームワーク: Nuxt.js
+- CSS テンプレート: Vuetify
+
+## 構成図

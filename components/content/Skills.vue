@@ -1,14 +1,14 @@
 <template>
   <v-expand-transition>
     <div v-if="isExpandedSkills">
-      <v-row v-for="i in 4" :key="i" align="center">
+      <v-row v-for="language in languages" :key="language.name" align="center">
         <v-col cols="12" sm="12" md="12" lg="12" xl="1">
-          <div v-html="languages[i-1]"></div>
+          <div v-html="language.name"></div>
         </v-col>
         <v-col cols="12" sm="12" md="12" lg="12" xl="11">
           <v-progress-linear
             active
-            :buffer-value="rndNumber()"
+            :buffer-value="language.experience"
             :color="rndColor()"
             stream
             background-opacity="1"
@@ -36,7 +36,14 @@ export default {
   },
   data() {
     return {
-      languages: ['HTML', 'CSS', 'VueJS', 'Vuetify'],
+      languages: [
+        { name: 'Ruby', experience: 100 },
+        { name: 'Ruby on Rails', experience: 100 },
+        { name: 'JavaScript', experience: 80 },
+        { name: 'Vue.js', experience: 80 },
+        { name: 'HTML', experience: 60 },
+        { name: 'CSS', experience: 40 }
+        ],
     }
   },
 }

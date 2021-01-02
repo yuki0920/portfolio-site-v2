@@ -33,3 +33,5 @@ $ npm run generate
 - CSS テンプレート: Vuetify
 
 ## 構成図
+
+![](./diagram.drawio)

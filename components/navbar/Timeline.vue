@@ -10,8 +10,9 @@
       color="white"
       icon-color="indigo"
     >
-      <small class="d-flex ml-n3 align-center">
+      <small class="ml-n3 align-left">
         <span class="font-weight-bold mr-1">{{item.title}}:</span>
+        <br>
         {{item.text}}
       </small>
     </v-timeline-item>

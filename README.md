@@ -34,4 +34,4 @@ $ npm run generate
 
 ## 構成図
 
-![](./diagram.drawio)
+![](./diagram.png)

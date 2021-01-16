@@ -14,8 +14,8 @@
                 >
                   <div
                     class="align-self-end"
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Non assumenda corporis, accusamus est adipisci labore. Deserunt voluptates aperiam, earum culpa voluptatum minus consequatur quo animi dicta recusandae! Ea, est enim?</div>
-                  <NuxtLink to="#" class="font-weight-bold">www.google.com</NuxtLink>
+                  >技術習得を目的としたWebアプリケーション/Webサイトです。</div>
+                  <NuxtLink to="https://github.com/yuki0920" class="font-weight-bold">My GitHub Account</NuxtLink>
                 </div>
               </v-fade-transition>
             </v-img>

@@ -15,7 +15,7 @@
                   <div
                     class="align-self-end"
                   >技術習得を目的としたWebアプリケーション/Webサイトです。</div>
-                  <NuxtLink to="https://github.com/yuki0920" class="font-weight-bold">My GitHub Account</NuxtLink>
+                  <a href=https://github.com/yuki0920 target=”_blank”>My GitHub Account</a>
                 </div>
               </v-fade-transition>
             </v-img>

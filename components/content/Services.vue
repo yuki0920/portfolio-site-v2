@@ -25,24 +25,24 @@ export default {
   data() {
     return {
       streigths: [
-        // {
-        //   title: 'Web開発',
-        //   text: 'commint soon...',
-        //   icon: 'online-shopping.svg',
-        // },
+        {
+          title: 'Web開発',
+          text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+          icon: 'online-shopping.svg',
+        },
         {
           title: '積極性',
-          text: 'commint soon...',
+          text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
           icon: 'checklist.svg',
         },
         {
           title: 'コミュニケーション',
-          text: 'commint soon...',
+          text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
           icon: 'paint.svg',
         },
         {
-          title: 'キャッチアップ力',
-          text: 'commint soon...',
+          title: 'キャッチアップ',
+          text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
           icon: 'schedule.svg',
         },
       ],

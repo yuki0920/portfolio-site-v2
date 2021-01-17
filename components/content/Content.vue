@@ -3,19 +3,7 @@
     <v-window v-model="currentTab" data-aos="fade-up">
       <v-window-item :value="0">
         <h4 class="my-6 primary--text">About me</h4>
-        <p>
-          <b>概要</b>
-          <br>
-          開発経験としては、少人数によるアジャイル開発によってバックエンドを主軸にフロントエンドまで担当してきました。特に、リファクタリングやテスト駆動開発といった開発の基盤となる技術に強みを持ちます。
-          <br>
-          開発経験以外では、前職で経理業務に長年携わっていたため、会計や金融分野に強みを持ちます。
-          そのため、それらの業務知識と深く結びついたサービスや機能では特に高いパフォーマンスを発揮することができます。
-        </p>
-        <p>
-          <b>3年後の目標や野望(短期的な目標)</b>
-          <br>
-          事業を伸ばせるエンジニアを目標としています。「よりよいサービスを開発したい」という気持ちがエンジニアとしての強いモチベーションとなっているためです。
-        </p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem et illum similique modi veniam eum quas pariatur, vel magnam harum inventore aperiam labore distinctio ipsa, magni id autem incidunt. Voluptatem perferendis, eum asperiores minus nam maiores delectus expedita fugit, architecto ad qui nihil modi nisi deleniti, dolorum sunt. Ullam quae a, temporibus saepe cumque sit hic tempore id consequuntur necessitatibus quas, sunt in accusantium labore fuga similique? Beatae molestiae obcaecati facere modi esse dolores maxime numquam ut qui deserunt exercitationem possimus dicta consectetur labore ipsum ratione dolor ducimus officiis, rerum fuga? Rem tempore corrupti reiciendis maxime. Molestias ab similique vitae.</p>
         <div class="d-flex justify-space-between w-100 align-center">
           <h4 class="my-6 primary--text">Strengths</h4>
           <v-btn icon @click="setExpandedServices" color="primary">
